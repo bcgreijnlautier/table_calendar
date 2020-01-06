@@ -87,8 +87,8 @@ class CalendarController {
   Map<CalendarFormat, String> _availableCalendarFormats;
   DateTime _previousFirstDay;
   DateTime _previousLastDay;
-  int _pageId;
-  double _dx;
+  int pageId;
+  double dx;
   bool _useNextCalendarFormat;
   bool _includeInvisibleDays;
   _SelectedDayCallback _selectedDayCallback;
@@ -113,8 +113,8 @@ class CalendarController {
     _selectedDayCallback = selectedDayCallback;
     _includeInvisibleDays = includeInvisibleDays;
 
-    _pageId = 0;
-    _dx = 0;
+    pageId = 0;
+    dx = 0;
 
     final now = DateTime.now();
     _focusedDay = initialDay ?? _normalizeDate(now);
@@ -323,13 +323,13 @@ class CalendarController {
   }
 
   void _decrementPage() {
-    _pageId--;
-    _dx = _dxMin;
+    pageId--;
+    dx = _dxMin;
   }
 
   void _incrementPage() {
-    _pageId++;
-    _dx = _dxMax;
+    pageId++;
+    dx = _dxMax;
   }
 
   List<DateTime> _daysInMonth(DateTime month) {
