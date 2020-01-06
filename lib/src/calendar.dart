@@ -480,13 +480,13 @@ class _TableCalendarState extends State<TableCalendar> with SingleTickerProvider
       transitionBuilder: (child, animation) {
         return SlideTransition(
           position:
-              Tween<Offset>(begin: Offset(widget.calendarController._dx, 0), end: Offset(0, 0)).animate(animation),
+              Tween<Offset>(begin: Offset(widget.calendarController.dx, 0), end: Offset(0, 0)).animate(animation),
           child: child,
         );
       },
       layoutBuilder: (currentChild, _) => currentChild,
       child: Dismissible(
-        key: ValueKey(widget.calendarController._pageId),
+        key: ValueKey(widget.calendarController.pageId),
         resizeDuration: null,
         onDismissed: _onHorizontalSwipe,
         direction: DismissDirection.horizontal,
