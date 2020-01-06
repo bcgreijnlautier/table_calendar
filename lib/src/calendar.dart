@@ -246,13 +246,13 @@ class _TableCalendarState extends State<TableCalendar> with SingleTickerProvider
 
   void _selectPrevious() {
     setState(() {
-      widget.calendarController._selectPrevious();
+      widget.calendarController.selectPrevious();
     });
   }
 
   void _selectNext() {
     setState(() {
-      widget.calendarController._selectNext();
+      widget.calendarController.selectNext();
     });
   }
 
